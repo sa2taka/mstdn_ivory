@@ -6,7 +6,7 @@ module MstdnIvory
     def request(method, path, options)
       request_url = self.base_url + path
 
-      res = HTTP.headers(self.headers).public(method, request_url, options_key: options)
+      res = HTTP.headers(self.headers).public_send(method, request_url, options)
       Oj.load(res)
     end
   end
