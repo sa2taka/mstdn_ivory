@@ -27,4 +27,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'http', '~> 3.3'
   spec.add_dependency 'oj', '~> 3.5'
+  spec.add_dependency 'oauth2', '~> 1.4'
 end
