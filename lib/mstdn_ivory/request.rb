@@ -7,9 +7,15 @@ module MstdnIvory
     def request(method, path, options)
       request_url = self.base_url + path
 
-      res = HTTP.headers(self.headers).public_send(method, request_url, options)
+      res = HTTP.headers(self.headers).public_send(method, request_url, {form: options})
       # Change Hash to DotAccessableHash
-      MstdnIvory::DotAccessableHash.new.merge(Oj.load(res))
+      json_data = Oj.load(res)
+      case json_data
+      when Array
+        json_data.map { |elm| MstdnIvory::DotAccessableHash.new.merge(elm) }
+      when Hash
+        MstdnIvory::DotAccessableHash.new.merge(json_data)
+      end
     end
   end
 end
