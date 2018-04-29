@@ -13,7 +13,7 @@ module MstdnIvory
     end
 
     def headers
-      { authorization: "Bearer #{@bearer_token}" }
+      { authorization: "Bearer #{@token}" }
     end
   end
 end
