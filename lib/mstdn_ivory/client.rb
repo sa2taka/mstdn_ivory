@@ -13,7 +13,11 @@ module MstdnIvory
     end
 
     def headers
-      { authorization: "Bearer #{@token}" }
+      {
+        accept: '*/*',
+        user_agent:'mstdn ivory',
+        authorization: "Bearer #{@token}"
+      }
     end
   end
 end
