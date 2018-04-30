@@ -6,14 +6,22 @@ module MstdnIvory
 
     attr_accessor :token
     attr_reader :base_url
+    attr_reader :timeout
 
-    def initialize(base_url, token = '')
+    DEFAULT_TIMEOUT = { connect: 2, read: 5, write: 20 }
+
+    def initialize(base_url, token = '', options = {})
       @base_url = base_url
       @token = token
+      @timeout = DEFAULT_TIMEOUT.merge(options[:timeout] || {})
     end
 
     def headers
-      { authorization: "Bearer #{@bearer_token}" }
+      {
+        accept: '*/*',
+        user_agent:'mstdn ivory',
+        authorization: "Bearer #{@token}"
+      }
     end
   end
 end

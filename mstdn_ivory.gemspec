@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["sa2taka"]
   spec.email         = ["sa2taka@gmail.com"]
 
-  spec.summary       = %q{Ruby binding for Mastodon api.}
-  spec.description   = %q{Ruby binding for Mastodon api, like mastodon-api npm package}
+  spec.summary       = %q{Ruby interface for Mastodon api.}
+  spec.description   = %q{Ruby interface for Mastodon api, like mastodon-api npm package}
   spec.homepage      = "https://github.com/sa2taka/mstdn_ivory"
   spec.license       = "MIT"
 
