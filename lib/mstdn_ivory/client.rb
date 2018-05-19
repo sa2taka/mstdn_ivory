@@ -25,3 +25,7 @@ module MstdnIvory
     end
   end
 end
+
+client = MstdnIvory::Client.new('https://mstdn-workers.com', '1dfdee8ae81c8f1b8af463c7460d777d6870fd1acc6470443c468cea4965ca58').stream('/api/v1/streaming/public') do |body|
+  puts body
+end
