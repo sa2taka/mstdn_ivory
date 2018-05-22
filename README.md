@@ -59,7 +59,7 @@ client.get('/api/v1/accounts/424') # => Information of my accounts
 
 #### examples
 
-You can get and post method using client.
+You can get, post and stream method using client.
 
 For example, Reading the home timeline:
 
@@ -88,7 +88,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/mstdn_ivory. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sa2taka/mstdn_ivory. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
