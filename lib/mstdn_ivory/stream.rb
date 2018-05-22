@@ -7,10 +7,10 @@ require 'mstdn_ivory/parser'
 module MstdnIvory
   module Stream
     def stream(path, options = {}, &block)
-      request(:get, path, options, &block)
+      stream_request(:get, path, options, &block)
     end
 
-    def request(method, path, params, &block)
+    def stream_request(method, path, params, &block)
       uri = Addressable::URI.parse(self.base_url + path)
 
       request = HTTP::Request.new(verb: method, uri: uri + '?' + to_url_params(params), headers: self.headers)
